@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventsApp">
+  <head>
+  <title>New Event</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+  <link rel="stylesheet" href="css/app.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+  </head>
+<body ng-cloak>
+
+<div class="container">
+  <div clas="navbar-inner">
+    <ul>
+      <li><a href="/NewEvent.html">Add Event</a></li>
+    </ul>
+  </div>
+
+  <div ng-controller="EditEventController">
+    <div class="container">
+      <h1>New Event</h1>
+      <br>
+      <form name="newEventForm">
+        <label for="name">Name:</label> <input type="text" name="name" ng-model="event.name" required /><br>
+        <label for="date">Date:</label> <input type="text" name="date" ng-model="event.date" required ng-pattern="/\d\d\/\d\d\/\d\d\d\d/" /><br>
+        <label for="time">Time:</label><input type="text" name="time" ng-model="event.time" /><br>
+        <br><br>
+        <label for="address">Address:</label><input type="text" name="address" ng-model="event.address" /><br>
+        <label for="city">City:</label><input type="text" name="city" class="input-small" ng-model="event.city" />
+        <label for="state">State:</label><input type="text" name="state" class="input-small" ng-model="event.state" /><br>
+        <br><br>
+        <label for="image">Image:</label><input type="text" name="image" ng-model="event.image" /><br>
+        <img ng-src="{{event.image}}" src="" />
+        <br><br>
+        <buton type="submit" class="btn btn-primary" ng-disabled="newEventForm.$invalid" ng-click="saveEvent(event, newEventForm)">Save</buton>
+      </form>
+    </div>
+  </div>
+    
+  
+</div>
+
+
+<script src="lib/jquery.min.js"></script>
+<script src="lib/underscore.min.js"></script>
+<script src="lib/bootstrap.min.js"></script>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-sanitize.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/EventController.js"></script>
+<script src="js/controllers/EditEventController.js"></script>
+<script src="js/filters.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="movieApp">
+  <head>
+  <title>EventDetails</title>
+  <link rel="stylesheet" href="assets/css/app.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+  </head>
+<body ng-cloak>
+
+<!-- Navigation -->
+<ul>
+  <li><a href='#/'>Home</a></li>
+  <li><a href='#/products'>Products</a></li>
+</ul>
+
+
+<!-- Main Yield -->
+<div ng-view></div>
+  
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/underscore.min.js"></script>
+<script src="assets/js/angular.min.js"></script>
+<script src="assets/js/angular-sanitize.min.js"></script>
+<script src="common/app.js"></script>
+<script src="common/filters.js"></script>
+<script src="product/ProductModel.js"></script>
+<script src="product/ProductController.js"></script>
+</body>
+
+</html>
