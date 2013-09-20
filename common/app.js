@@ -6,8 +6,10 @@ var movieApp = angular.module('movieApp', []);
 
 // Routes
 angular.module('movieApp').
-  config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/products', {templateUrl: 'product/index.html', controller: 'ProductController'})
+  config(['$routeProvider', function($routeProvider, $routeParams) {
+    $routeProvider.when('/products', {templateUrl: 'product/index.html', controller: 'ProductController'});
+    $routeProvider.when('/products/:id', {templateUrl: 'product/detail.html', controller: 'ProductDetailController'});
+    $routeProvider.otherwise({redirectTo: 'home.html'});
   }]);
 
 

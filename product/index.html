@@ -1,5 +1,10 @@
 <div ng-controller='ProductController'>
   <ul>
-    <li ng-repeat="product in products">{{ product.name }}</li>
+    <li ng-repeat="product in products">
+      <a href="#/products/{{ product.id }}">{{ product.name }}</a>
+      <figure>
+        <a href="#/products/{{ product.id }}"><img ng-src="assets/img/{{ product.slug + '_ticket_thumb.jpg' }}"></a>
+      </figure>
+    </li>
   </ul>  
 </div>
