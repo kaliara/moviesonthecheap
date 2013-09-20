@@ -9,6 +9,7 @@ angular.module('movieApp').
   config(['$routeProvider', function($routeProvider, $routeParams) {
     $routeProvider.when('/products', {templateUrl: 'product/index.html', controller: 'ProductController'});
     $routeProvider.when('/products/:id', {templateUrl: 'product/detail.html', controller: 'ProductDetailController'});
+    $routeProvider.when('/cart', {templateUrl: 'cart/index.html', controller: 'CartController'});
     $routeProvider.otherwise({redirectTo: 'home.html'});
   }]);
 
