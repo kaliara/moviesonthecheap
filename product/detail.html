@@ -2,10 +2,8 @@
 <img ng-src="assets/img/{{ product.slug + '_ticket.jpg' }}">
 <form ng-submit="addProductToCart(cart_item, newCartForm)" name="newCartForm" ng-controller="CartController">
   <label for="quantity">Quantity:</label>
-  <input ng-model="cart_item.quantity" type="text" name="quantity" required ng-pattern="/\d{2,}/" value="10" id="quantity" /> <span ng-show="newCartForm.$invalid">(minimum of 10)</span><br>
+  <input ng-model="cart_item.quantity" type="text" name="quantity" required ng-pattern="/\d{2,}/" value="10" id="quantity" /> <span ng-show="newCartForm.$invalid">(minimum of 10)</span>
   <button type="submit" ng-disabled="newCartForm.$invalid">Add to Cart</button>
-  <br><br>
-  {{ cart_items }}
 </form>
 <p>{{ product.description }}</p>
 <p>{{ product.locations }}</p>

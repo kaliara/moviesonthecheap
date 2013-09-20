@@ -1,7 +1,7 @@
 'use strict';
 
 movieApp.factory('CartModel', function() {
-  var cart = { created_on: new Date(), cart_items: [{"name":"AMC Movie Tickets","product_id":"1","price":6.5,"quantity":"10"},{"name":"Regal Movie Tickets","product_id":"2","price":6.5,"quantity":"15"}]  };
+  var cart = { created_on: new Date(), cart_items: [] };
   
   return {
     getCartItems: function() {

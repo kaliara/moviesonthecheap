@@ -24,3 +24,20 @@
     </tr>
   </tfoot>
 </table>
+
+
+<form ng-controller="PurchaseController" ng-submit="submitPurchase(purchase, newPurchaseForm)" name="newPurchaseForm">
+  <h4>Payment Information</h4>
+  <label for="name_on_card">Name on Credit Card</label>
+  <input ng-model="purchase.name_on_card" type="text" name="name_on_card" id="name_on_card" />
+  <br><br>
+  <label for="card_number">Card Number</label>
+  <input ng-model="purchase.card_number" type="text" name="card_number" id="card_number" />
+  <br><br>
+  <label for="expiration_month">Expiration Date</label>
+  <input ng-model="purchase.expiration_month" type="text" name="expiration_month" id="expiration_month" />
+  <input ng-model="purchase.expiration_year" type="text" name="expiration_year" id="expiration_year" />
+  <br><br>
+  <br><br>
+  <button type="submit" ng-disabled="newPurchaseForm.$invalid">Submit Order</button>
+</form>
