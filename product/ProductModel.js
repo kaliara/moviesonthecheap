@@ -21,6 +21,9 @@ movieApp.factory('ProductModel', function() {
         description: 'Regal VIP Tickets are redeemable for movie tickets at all Regal theaters and Regal theater partners. Simply present your ticket at the Box Office and see a great show at a great discount.',
         restrictions: 'Valid seven days a week. Tickets cannot be used for Special Engagements, which are noted at the box office and are typically the first 10-14 days of a film\'s release. However, they may be upgraded at the box office. Surcharges may apply for special events and for enhanced movie experiences, such as 3D, IMAX, and RPX films. Please contact your local theatre for specific details',
       }
-    ]
+    ],
+    getProduct: function(id, products) {
+      return this.products[id - 1];
+    }
   }
 });
