@@ -21,5 +21,6 @@ movieApp.controller('CartController', function CartController($scope, $routePara
   
   $scope.emptyCart = function() {
     CartModel.emptyCart();
+    $scope.cart_total = CartModel.getCartTotal();
   }
 });
